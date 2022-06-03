@@ -85,11 +85,15 @@ $result = mysqli_query($koneksi, "SELECT * FROM movies");
                     </div>
                 </div>
                 <ul id="main-menu" class="metismenu">
-                    <li class="g_heading">Main</li>
+                    <li class="g_heading">Main Menu</li>
                     <li><a href="./index.php"><i class="ti-home"></i><span>Dashboard</span></a></li>
-                    <li><a href="./show_movie_data.php"><i class="ti-list"></i><span>Show Movie Data</span></a></li>
-                    <li><a href="./add_movie_data.php"><i class="ti-list"></i><span>Add Movie Data</span></a></li>
-                    <!-- <li><a href="./edit_movie_data.php"><i class="ti-list"></i><span>Edit Movie Data</span></a></li> -->
+                    <li class="g_heading">Movie Menu</li>
+                    <li><a href="./show_movie_data.php"><i class="ti-list"></i><span>Tampilkan Data Film</span></a></li>
+                    <li><a href="./add_movie_data.php"><i class="ti-list"></i><span>Tambahkan Data Film</span></a></li>
+                    <li class="g_heading">User Menu</li>
+                    <li><a href="./show_user_data.php"><i class="ti-list"></i><span>Tampilkan Data User</span></a></li>
+                    <li><a href="./add_user_data.php"><i class="ti-list"></i><span>Tambahkan Data User</span></a></li>
+                    <li class="g_heading">Log Kejadian</li>
                     <li><a href="ui-elements.html"><i class="ti-vector"></i><span>UI Elements</span></a></li>
                     <li class="g_heading">Application</li>
                     <li><a href="app-calendar.html"><i class="ti-calendar"></i><span>Calendar</span></a></li>

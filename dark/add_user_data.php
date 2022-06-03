@@ -2,17 +2,9 @@
 include "../koneksi.php";
 if (isset($_POST['submit'])) {
     $name = $_POST['name'];
-    $duration = $_POST['duration'];
-    $archievement = $_POST['archievement'];
-    $description = $_POST['description'];
-    $level = $_POST['level'];
-    $position = $_POST['position'];
-    $link = $_POST['link'];
-    $thumbnail = "http://img.youtube.com/vi/" . $_POST['thumbnail'] . "/maxresdefault.jpg";
-    $year = $_POST['year'];
-    $school = $_POST['school'];
-    $embedded_link = "https://www.youtube.com/embed/" . $_POST['thumbnail'];
-    $query = mysqli_query($koneksi, "INSERT INTO `database_fls2n_web`.`movies` (`name`, `duration`, `archievement`, `description`, `level`, `position`, `link`, `thumbnail`, `year`, `school`, `embedded_link`) VALUES ('$name', '$duration', '$archievement', '$description', '$level', '$position', '$link', '$thumbnail', '$year', '$school', '$embedded_link')");
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $query = mysqli_query($koneksi, "INSERT INTO `database_fls2n_web`.`users` (`username`, `password`, `name`) VALUES ('$username', '$password', '$name')");
 }
 ?>
 
@@ -25,7 +17,7 @@ if (isset($_POST['submit'])) {
     <meta name="description" content="">
     <meta name="author" content="ThemeMakker">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <title>Add Data Movie | FLS2N Web</title>
+    <title>Edit Data Movie | FLS2N Web</title>
 
     <link rel="stylesheet" href="../assets/vendor/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="../assets/vendor/fontawesome/css/font-awesome.min.css">
@@ -52,7 +44,7 @@ if (isset($_POST['submit'])) {
                     <li class="nav-item page-header">
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="./index.php"><i class="fa fa-home"></i></a></li>
-                            <li class="breadcrumb-item active">Add Data Movie</li>
+                            <li class="breadcrumb-item active">Edit Data Movie</li>
                         </ul>
                     </li>
                 </ul>
@@ -188,67 +180,22 @@ if (isset($_POST['submit'])) {
                 <div class="row clearfix">
                     <div class="col-lg-12 col-md-12">
                         <div class="card planned_task">
-                            <div class="header">
-                                <h2>Festival dan Lomba Seni Siswa Nasional</h2>
-                            </div>
                             <div class="body">
-                                <h4>Tambah Data Film FLS2N</h4>
+                                <h4>Tambah Data Pengguna</h4>
                                 <form method="post">
-                                    <label for="basic-url">Judul Film</label>
+                                    <label for="basic-url">Nama Pengguna</label>
                                     <div class="input-group mb-3">
-                                        <input type="text" class="form-control" name="name" placeholder="Nama Film (e.g Sang Petualang)" aria-label="name" aria-describedby="basic-addon1" required>
+                                        <input type="text" class="form-control" name="name" id="name" placeholder="Nama Pengguna" aria-label="name" aria-describedby="basic-addon1">
                                     </div>
-                                    <label for="basic-url">Durasi</label>
+                                    <label for="basic-url">Username</label>
                                     <div class="input-group mb-3">
-                                        <input type="text" class="form-control" name="duration" placeholder="Durasi (e.g 04:01)" aria-label="duration" aria-describedby="basic-addon1">
+                                        <input type="text" class="form-control" name="username" placeholder="Username" aria-label="username" aria-describedby="basic-addon1">
                                     </div>
-                                    <label for="basic-url">Penghargaan</label>
+                                    <label for="basic-url">Password</label>
                                     <div class="input-group mb-3">
-                                        <input type="text" class="form-control" name="archievement" placeholder="Penghargaan (e.g Juara 1 FLS2N Nasional)" aria-label="archievement" aria-describedby="basic-addon1">
+                                        <input type="password" class="form-control" name="password" placeholder="Password" aria-label="password" aria-describedby="basic-addon1">
                                     </div>
-                                    <label for="basic-url">Deskripsi</label>
-                                    <div class="input-group mb-3">
-                                        <textarea class="form-control" rows="5" cols="30" id="description" name="description" placeholder="Masukkan deskripsi film disini"></textarea>
-                                    </div>
-                                    <label for="basic-url">Tingkat</label>
-                                    <div class="mb-3">
-                                        <select class="form-control show-tick ms select2" data-placeholder="position" name="level">
-                                            <option selected hidden>Pilih Tingkat Kompetisi Film FLS2N</option>
-                                            <option>Kabupaten</option>
-                                            <option>Kota</option>
-                                            <option>Provinsi</option>
-                                            <option>Nasional</option>
-                                        </select>
-                                    </div>
-                                    <label for="basic-url">Peringkat</label>
-                                    <div class="mb-3">
-                                        <select class="form-control show-tick ms select2" data-placeholder="position" name="position">
-                                            <option selected hidden>Pilih Peringkat Juara Film</option>
-                                            <option>Juara 1</option>
-                                            <option>Juara 2</option>
-                                            <option>Juara 3</option>
-                                            <option>Juara 4</option>
-                                            <option>Juara 5</option>
-                                            <option>Juara Favorit</option>
-                                            <option>Lainnya</option>
-                                        </select>
-                                    </div>
-                                    <label for="basic-url">Link Video Youtube</label>
-                                    <div class="input-group mb-3">
-                                        <input type="text" class="form-control" name="link" placeholder="Link Video FL2SN (e.g https://www.youtube.com/watch?v=6lGmrLR1AYg)" aria-label="link" aria-describedby="basic-addon1">
-                                    </div>
-                                    <label for="basic-url">ID Video Youtube</label>
-                                    <div class="input-group mb-3">
-                                        <input type="text" class="form-control" name="thumbnail" placeholder="Link ID Youtube Film (https://www.youtube.com/watch?v=ID_VIDEO)" aria-label="thumbnail" aria-describedby="basic-addon1">
-                                    </div>
-                                    <label for="basic-url">Tahun Pembuatan</label>
-                                    <div class="input-group mb-3">
-                                        <input type="text" class="form-control" name="year" placeholder="Tahun Pembuatan Video" aria-label="year" aria-describedby="basic-addon1">
-                                    </div>
-                                    <label for="basic-url">Asal Sekolah</label>
-                                    <div class="input-group mb-3">
-                                        <input type="text" class="form-control" name="school" placeholder="Asal Sekolah" aria-label="school" aria-describedby="basic-addon1">
-                                    </div>
+
                                     <button type="submit" class="btn btn-primary" name="submit">Submit</button>
                                 </form>
                             </div>

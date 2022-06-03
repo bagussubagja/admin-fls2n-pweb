@@ -235,13 +235,13 @@ if (isset($_POST['submit'])) {
                                     <div class="mb-3">
                                         <select class="form-control show-tick ms select2" data-placeholder="position" name="position">
                                             <option selected hidden><?php echo $position; ?></option>
-                                            <option>Juara 1</option>
-                                            <option>Juara 2</option>
-                                            <option>Juara 3</option>
-                                            <option>Juara 4</option>
-                                            <option>Juara 5</option>
-                                            <option>Juara Favorit</option>
-                                            <option>Lainnya</option>
+                                            <option style="background-color: #192B3F;">Juara 1</option>
+                                            <option style="background-color: #192B3F;">Juara 2</option>
+                                            <option style="background-color: #192B3F;">Juara 3</option>
+                                            <option style="background-color: #192B3F;">Juara 4</option>
+                                            <option style="background-color: #192B3F;">Juara 5</option>
+                                            <option style="background-color: #192B3F;">Juara Favorit</option>
+                                            <option style="background-color: #192B3F;">Lainnya</option>
                                         </select>
                                     </div>
                                     <label for="basic-url">Link Video Youtube</label>

@@ -2,23 +2,20 @@
 include "../koneksi.php";
 $result = mysqli_query($koneksi, "SELECT * FROM movies");
 ?>
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="Webpixels">
+    <meta name="author" content="ThemeMakker">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>Admin | FLS2N WEB</title>
 
     <link rel="stylesheet" href="../assets/vendor/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="../assets/vendor/fontawesome/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="../assets/vendor/charts-c3/plugin.css" />
-    <link rel="stylesheet" href="../assets/vendor/jvectormap/jquery-jvectormap-2.0.3.css" />
     <link rel="stylesheet" href="../assets/css/main.css" type="text/css">
     <link rel="stylesheet" href="../assets/css/dark.css" type="text/css">
 </head>
@@ -41,7 +38,7 @@ $result = mysqli_query($koneksi, "SELECT * FROM movies");
                     <li class="nav-item page-header">
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="./index.php"><i class="fa fa-home"></i></a></li>
-                            <li class="breadcrumb-item active">Home</li>
+                            <li class="breadcrumb-item active">Show Movie Data</li>
                         </ul>
                     </li>
                 </ul>
@@ -86,10 +83,7 @@ $result = mysqli_query($koneksi, "SELECT * FROM movies");
                 </div>
                 <ul id="main-menu" class="metismenu">
                     <li class="g_heading">Main</li>
-                    <li><a href="./index.php"><i class="ti-home"></i><span>Dashboard</span></a></li>
-                    <li><a href="./show_movie_data.php"><i class="ti-list"></i><span>Show Movie Data</span></a></li>
-                    <li><a href="./add_movie_data.php"><i class="ti-list"></i><span>Add Movie Data</span></a></li>
-                    <!-- <li><a href="./edit_movie_data.php"><i class="ti-list"></i><span>Edit Movie Data</span></a></li> -->
+                    <li><a href="index.html"><i class="ti-home"></i><span>Dashboard</span></a></li>
                     <li><a href="ui-elements.html"><i class="ti-vector"></i><span>UI Elements</span></a></li>
                     <li class="g_heading">Application</li>
                     <li><a href="app-calendar.html"><i class="ti-calendar"></i><span>Calendar</span></a></li>
@@ -98,7 +92,6 @@ $result = mysqli_query($koneksi, "SELECT * FROM movies");
                     <li><a href="app-chat.html"><i class="ti-comments"></i><span>Chat Apps</span></a></li>
                     <li><a href="app-contact.html"><i class="ti-id-badge"></i><span>Contact List</span></a></li>
                     <li><a href="widgets.html"><i class="ti-widget"></i><span>Widgets</span></a></li>
-
                     <li class="g_heading">Chart, Froms & Elements</li>
                     <li>
                         <a href="javascript:void(0)" class="has-arrow"><i class="ti-pie-chart"></i><span>Charts</span></a>
@@ -129,16 +122,16 @@ $result = mysqli_query($koneksi, "SELECT * FROM movies");
                             <li><a href="table-normal.html">Table Normal</a></li>
                             <li><a href="table-datatable.html">Jquery Datatable</a></li>
                             <li><a href="table-editable.html">Table Editable</a></li>
-                            <li><a href="table-color.html">Table Color</a></li>
-                            <li><a href="table-filter.html">Table Filter</a></li>
+                            <li><a href="table-foo.html">Table Foo</a></li>
                         </ul>
                     </li>
                     <li class="g_heading">Users</li>
                     <li><a href="page-profile.html"><i class="ti-user"></i><span>Profile</span></a></li>
                     <li><a href="page-timeline.html"><i class="ti-menu-alt"></i><span>Timeline</span></a></li>
-                    <li><a href="page-invoices.html"><i class="ti-file"></i><span>Invoices</span></a></li>
+                    <li><a href="page-invoices.html"><i class="ti-file"></i><span>Invoices</span></a>
+                    </li>
                     <li class="g_heading">Authentication</li>
-                    <li class="open-top">
+                    <li>
                         <a href="javascript:void(0)" class="has-arrow"><i class="ti-lock"></i><span>Authentication</span></a>
                         <ul>
                             <li><a class="dropdown-item" href="auth-login.html">Login</a></li>
@@ -147,7 +140,7 @@ $result = mysqli_query($koneksi, "SELECT * FROM movies");
                             <li><a class="dropdown-item" href="auth-lock-screen.html">Lock Screen</a></li>
                         </ul>
                     </li>
-                    <li class="open-top">
+                    <li>
                         <a href="javascript:void(0)" class="has-arrow"><i class="ti-na"></i><span>Error Pages</span></a>
                         <ul>
                             <li><a class="dropdown-item" href="error-400.html">400 error</a></li>
@@ -159,18 +152,15 @@ $result = mysqli_query($koneksi, "SELECT * FROM movies");
                         </ul>
                     </li>
                     <li class="g_heading">Extra</li>
-                    <li class="open-top">
+                    <li class="active">
                         <a href="javascript:void(0)" class="has-arrow"><i class="ti-clipboard"></i><span>Pages</span></a>
                         <ul>
-                            <li><a href="page-empty.html">Empty page</a></li>
+                            <li class="active"><a href="page-empty.html">Empty page</a></li>
                             <li><a href="page-pricing.html">Pricing cards</a>
                             <li><a href="page-search.html">Search Results</a></li>
                             <li><a href="page-testimonials.html">Testimonials</a></li>
-                            <li><a href="page-maps.html">Maps</a></li>
                             <li><a href="page-icons.html">Icons</a></li>
-                            <li><a href="page-carousel.html">Carousel</a></li>
                             <li><a href="page-gallery.html">Gallery</a></li>
-                            <li><a href="page-lookup.html">Lookup</a></li>
                         </ul>
                     </li>
                     <li><a href="../docs/introduction.html"><i class="ti-file"></i><span>Documentation</span></a></li>
@@ -181,43 +171,71 @@ $result = mysqli_query($koneksi, "SELECT * FROM movies");
         <div class="page">
 
             <div class="container-fluid">
-
                 <div class="row clearfix">
-                    <div class="col-lg-12">
-                        <div class="card">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="card planned_task">
                             <div class="header">
-                                <h2>Admin Homepage<small>Berikut adalah data film lomba FLS2N yang tersimpan pada database</small></h2>
+                                <h2>Festival dan Lomba Seni Siswa Nasional</h2>
                             </div>
                             <div class="body">
-                                <div class="gallery b4gallery" style="display:none;">
-                                    <?php
-                                    while ($row = mysqli_fetch_array($result)) {
-                                        echo "<img link=" . $row['embedded_link'] . " class='gallery-item' src='" . $row['thumbnail'] . "' alt='' />";
-                                    }
-                                    ?>
+                                <h4>Daftar Film FLS2N</h4>
+                            </div>
+                            <div class="body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover mb-0 c_list">
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>Nama</th>
+                                                <th>Durasi</th>
+                                                <th>Penghargaan</th>
+                                                <th>Deskripsi</th>
+                                                <th>Tingkat</th>
+                                                <th>Juara</th>
+                                                <th>Link</th>
+                                                <th>Thumbnail</th>
+                                                <th>Tahun</th>
+                                                <th>Sekolah</th>
+                                                <th>Aksi</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php
+                                            $no = 1;
+                                            while ($movie_data = mysqli_fetch_array($result)) {
+                                                echo "<tr>";
+                                                echo "<td>" . $no . "</td>";
+                                                echo "<td>" . $movie_data['name'] . "</td>";
+                                                echo "<td>" . $movie_data['duration'] . "</td>";
+                                                echo "<td>" . $movie_data['archievement'] . "</td>";
+                                                echo "<td>" . $out = strlen($movie_data['description']) > 20 ? substr($movie_data['description'], 0, 20) . "..." : $movie_data['description']  . "</td>";
+                                                echo "<td>" . $movie_data['level'] . "</td>";
+                                                echo "<td>" . $movie_data['position'] . "</td>";
+                                                echo "<td>" . $movie_data['link'] . "</td>";
+                                                echo "<td>" . $movie_data['thumbnail'] . "</td>";
+                                                echo "<td>" . $movie_data['year'] . "</td>";
+                                                echo "<td>" . $movie_data['school'] . "</td>";
+                                                echo "<td> <a href='edit_movie_data.php?updateid=" . $movie_data['id'] . " '>Edit</a> | <a href='delete_movie.php?id=" . $movie_data['id'] . "'>Delete</a></td>";
+                                                $no++;
+                                            }
+                                            ?>
+
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
 
-    <!-- Core -->
+    <!-- Javascript -->
     <script src="../assets/bundles/libscripts.bundle.js"></script>
     <script src="../assets/bundles/vendorscripts.bundle.js"></script>
 
-    <script src="../assets/vendor/LightboxGallery/mauGallery.min.js"></script>
-    <script src="../assets/vendor/LightboxGallery/scripts.js"></script>
-
-    <script src="../assets/bundles/c3.bundle.js"></script>
-    <script src="../assets/bundles/jvectormap.bundle.js"></script> <!-- JVectorMap Plugin Js -->
-
     <script src="../assets/js/theme.js"></script>
-    <script src="../assets/js/pages/index.js"></script>
-    <script src="../assets/js/pages/todo-js.js"></script>
 </body>
 
 </html>

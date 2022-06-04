@@ -1,24 +1,21 @@
 <?php
 include "../koneksi.php";
-$result = mysqli_query($koneksi, "SELECT * FROM movies");
+$result = mysqli_query($koneksi, "SELECT * FROM log_movie");
 ?>
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="Webpixels">
+    <meta name="author" content="ThemeMakker">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>Admin | FLS2N WEB</title>
 
     <link rel="stylesheet" href="../assets/vendor/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="../assets/vendor/fontawesome/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="../assets/vendor/charts-c3/plugin.css" />
-    <link rel="stylesheet" href="../assets/vendor/jvectormap/jquery-jvectormap-2.0.3.css" />
     <link rel="stylesheet" href="../assets/css/main.css" type="text/css">
     <link rel="stylesheet" href="../assets/css/dark.css" type="text/css">
 </head>
@@ -41,7 +38,7 @@ $result = mysqli_query($koneksi, "SELECT * FROM movies");
                     <li class="nav-item page-header">
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="./index.php"><i class="fa fa-home"></i></a></li>
-                            <li class="breadcrumb-item active">Home</li>
+                            <li class="breadcrumb-item active">Show Log Movie Data</li>
                         </ul>
                     </li>
                 </ul>
@@ -96,43 +93,57 @@ $result = mysqli_query($koneksi, "SELECT * FROM movies");
         <div class="page">
 
             <div class="container-fluid">
-
                 <div class="row clearfix">
-                    <div class="col-lg-12">
-                        <div class="card">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="card planned_task">
                             <div class="header">
-                                <h2>Admin Homepage<small>Berikut adalah data film lomba FLS2N yang tersimpan pada database</small></h2>
+                                <h2>Festival dan Lomba Seni Siswa Nasional</h2>
                             </div>
                             <div class="body">
-                                <div class="gallery b4gallery" style="display:none;">
-                                    <?php
-                                    while ($row = mysqli_fetch_array($result)) {
-                                        echo "<img link=" . $row['embedded_link'] . " class='gallery-item' src='" . $row['thumbnail'] . "' alt='' />";
-                                    }
-                                    ?>
+                                <h4>Daftar Pengguna Gallery FLS2N WEB</h4>
+                            </div>
+                            <div class="body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover mb-0 c_list">
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>ID Film</th>
+                                                <th>Nama Film</th>
+                                                <th>Log Status</th>
+                                                <th>Waktu</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php
+                                            $no = 1;
+                                            while ($log_data = mysqli_fetch_array($result)) {
+                                                echo "<tr>";
+                                                echo "<td>$no</td>";
+                                                echo "<td>" . $log_data['id'] . "</td>";
+                                                echo "<td>" . $log_data['name'] . "</td>";
+                                                echo "<td>" . $log_data['status'] . "</td>";
+                                                echo "<td>" . $log_data['created_date'] . "</td>";
+                                                $no++;
+                                            }
+                                            ?>
+                                        </tbody>
+                                    </table>
+                                    <button onclick="location.href='./delete_log_movie.php'" type="button" class="btn btn-block btn-primary">Delete</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
 
-    <!-- Core -->
+    <!-- Javascript -->
     <script src="../assets/bundles/libscripts.bundle.js"></script>
     <script src="../assets/bundles/vendorscripts.bundle.js"></script>
 
-    <script src="../assets/vendor/LightboxGallery/mauGallery.min.js"></script>
-    <script src="../assets/vendor/LightboxGallery/scripts.js"></script>
-
-    <script src="../assets/bundles/c3.bundle.js"></script>
-    <script src="../assets/bundles/jvectormap.bundle.js"></script> <!-- JVectorMap Plugin Js -->
-
     <script src="../assets/js/theme.js"></script>
-    <script src="../assets/js/pages/index.js"></script>
-    <script src="../assets/js/pages/todo-js.js"></script>
 </body>
 
 </html>

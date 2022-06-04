@@ -102,7 +102,6 @@ $result = mysqli_query($koneksi, "SELECT * FROM movies");
                     <li><a href="app-chat.html"><i class="ti-comments"></i><span>Chat Apps</span></a></li>
                     <li><a href="app-contact.html"><i class="ti-id-badge"></i><span>Contact List</span></a></li>
                     <li><a href="widgets.html"><i class="ti-widget"></i><span>Widgets</span></a></li>
-
                     <li class="g_heading">Chart, Froms & Elements</li>
                     <li>
                         <a href="javascript:void(0)" class="has-arrow"><i class="ti-pie-chart"></i><span>Charts</span></a>

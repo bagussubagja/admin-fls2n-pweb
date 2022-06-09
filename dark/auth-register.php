@@ -7,12 +7,12 @@
     <meta name="description" content="">
     <meta name="author" content="ThemeMakker">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <title>:: BigBucket :: Register</title>
+    <title>Admin | Register</title>
     <link rel="stylesheet" href="../assets/vendor/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="../assets/vendor/fontawesome/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="../assets/css/main.css" type="text/css">
-<link rel="stylesheet" href="../assets/css/dark.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/dark.css" type="text/css">
 </head>
 
 <body class="theme-black full-dark">
@@ -23,24 +23,28 @@
             <p>Please wait...</p>
         </div>
     </div>
-	<!-- WRAPPER -->
-	<div id="wrapper">
-		<div class="vertical-align-wrap">
-			<div class="vertical-align-middle auth-main">
-				<div class="auth-box">
+    <!-- WRAPPER -->
+    <div id="wrapper">
+        <div class="vertical-align-wrap">
+            <div class="vertical-align-middle auth-main">
+                <div class="auth-box">
                     <div class="top">
-                        <img src="../assets/images/brand/icon.svg" alt="Lucid">
-                        <strong>Big</strong> <span>Bucket</span>
+                        
+                        <strong>Admin</strong> <span>FLS2N Gallery Short Movie</span>
                     </div>
-					<div class="card">
+                    <div class="card">
                         <div class="header">
                             <p class="lead">Create an account</p>
                         </div>
                         <div class="body">
                             <form class="form-auth-small">
                                 <div class="form-group">
-                                    <label for="signup-email" class="control-label sr-only">Email</label>
-                                    <input type="email" class="form-control" id="signup-email" placeholder="Your email">
+                                    <label for="signup-name" class="control-label sr-only">Nama</label>
+                                    <input type="name" class="form-control" id="name" placeholder="Nama">
+                                </div>
+                                <div class="form-group">
+                                    <label for="signup-username" class="control-label sr-only">Username</label>
+                                    <input type="username" class="form-control" id="username" placeholder="Username">
                                 </div>
                                 <div class="form-group">
                                     <label for="signup-password" class="control-label sr-only">Password</label>
@@ -48,25 +52,22 @@
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-lg btn-block">REGISTER</button>
                                 <div class="bottom">
-                                    <span class="helper-text">Already have an account? <a href="auth-login.html">Login</a></span>
+                                    <span class="helper-text">Already have an account? <a href="auth-login.php">Login</a></span>
                                 </div>
                             </form>
-                            <div class="separator-linethrough"><span>OR</span></div>
-                            <button class="btn btn-signin-social"><i class="fa fa-facebook-official facebook-color"></i> Sign in with
-                                Facebook</button>
-                            <button class="btn btn-signin-social"><i class="fa fa-twitter twitter-color"></i> Sign in with Twitter</button>
                         </div>
                     </div>
-				</div>
-			</div>
-		</div>
-	</div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- END WRAPPER -->
-    
-<!-- Core -->
-<script src="../assets/bundles/libscripts.bundle.js"></script>
-<script src="../assets/bundles/vendorscripts.bundle.js"></script>
 
-<script src="../assets/js/theme.js"></script>
+    <!-- Core -->
+    <script src="../assets/bundles/libscripts.bundle.js"></script>
+    <script src="../assets/bundles/vendorscripts.bundle.js"></script>
+
+    <script src="../assets/js/theme.js"></script>
 </body>
+
 </html>

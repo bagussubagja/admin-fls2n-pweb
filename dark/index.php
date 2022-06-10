@@ -1,6 +1,10 @@
 <?php
 include "../koneksi.php";
 $result = mysqli_query($koneksi, "SELECT * FROM movies");
+session_start();
+if (!isset($_SESSION['username'])) {
+    header("Location: ../index.php");
+}
 ?>
 
 <!DOCTYPE html>
@@ -55,7 +59,7 @@ $result = mysqli_query($koneksi, "SELECT * FROM movies");
                         <a class="nav-link nav-link-icon" href="javascript:void(0);" id="navbar_1_dropdown_3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i></a>
                         <div class="dropdown-menu dropdown-menu-right">
                             <h6 class="dropdown-header">Admin menu</h6>
-                            <a class="dropdown-item" href="javascript:void(0);"><i class="fa fa-sign-out text-primary"></i>Sign out</a>
+                            <a class="dropdown-item" href="../api/auth_logout_process.php"><i class="fa fa-sign-out text-primary"></i>Sign out</a>
                         </div>
                     </li>
                 </ul>

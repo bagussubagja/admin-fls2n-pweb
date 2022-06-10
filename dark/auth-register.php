@@ -29,7 +29,7 @@
             <div class="vertical-align-middle auth-main">
                 <div class="auth-box">
                     <div class="top">
-                        
+
                         <strong>Admin</strong> <span>FLS2N Gallery Short Movie</span>
                     </div>
                     <div class="card">
@@ -37,18 +37,18 @@
                             <p class="lead">Create an account</p>
                         </div>
                         <div class="body">
-                            <form class="form-auth-small">
+                            <form class="form-auth-small" action="../api/auth_register_process.php" method="POST">
                                 <div class="form-group">
                                     <label for="signup-name" class="control-label sr-only">Nama</label>
-                                    <input type="name" class="form-control" id="name" placeholder="Nama">
+                                    <input type="name" class="form-control" name="name" id="name" placeholder="Nama">
                                 </div>
                                 <div class="form-group">
                                     <label for="signup-username" class="control-label sr-only">Username</label>
-                                    <input type="username" class="form-control" id="username" placeholder="Username">
+                                    <input type="username" class="form-control" name="username" id="username" placeholder="Username">
                                 </div>
                                 <div class="form-group">
                                     <label for="signup-password" class="control-label sr-only">Password</label>
-                                    <input type="password" class="form-control" id="signup-password" placeholder="Password">
+                                    <input type="password" class="form-control" name="password" id="password" placeholder="Password">
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-lg btn-block">REGISTER</button>
                                 <div class="bottom">

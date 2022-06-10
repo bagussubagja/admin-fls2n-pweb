@@ -29,7 +29,7 @@
             <div class="vertical-align-middle auth-main">
                 <div class="auth-box">
                     <div class="top">
-                        
+
                         <strong>Admin</strong> <span>FLS2N Gallery Short Movie</span>
                     </div>
                     <div class="card">
@@ -37,16 +37,16 @@
                             <p class="lead">Login to your account</p>
                         </div>
                         <div class="body">
-                            <form class="form-auth-small" action="index.html">
+                            <form class="form-auth-small" method="POST" action="../api/auth_login_process.php">
                                 <div class="form-group">
-                                    <label for="signin-email" class="control-label sr-only">Email</label>
-                                    <input type="email" class="form-control" id="signin-email" value="" placeholder="Email">
+                                    <label for="signin-username" class="control-label sr-only">Email</label>
+                                    <input type="text" name="username" class="form-control" id="username" value="" placeholder="Username">
                                 </div>
                                 <div class="form-group">
                                     <label for="signin-password" class="control-label sr-only">Password</label>
-                                    <input type="password" class="form-control" id="signin-password" value="" placeholder="Password">
+                                    <input type="password" name="password" class="form-control" id="password" value="" placeholder="Password">
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block">LOGIN</button>
+                                <button id="buttonlogin" type="submit" class="btn btn-primary btn-lg btn-block">LOGIN</button>
                                 <div class="bottom">
                                     <span>Don't have an account? <a href="auth-register.php">Register</a></span>
                                 </div>

@@ -1,6 +1,6 @@
 <?php
 include "../koneksi.php";
-$result = mysqli_query($koneksi, "SELECT * FROM movies");
+$result = mysqli_query($koneksi, "CALL show_movie_data()");
 ?>
 <!doctype html>
 <html lang="en">

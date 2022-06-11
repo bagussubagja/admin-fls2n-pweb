@@ -12,7 +12,7 @@ if (isset($_POST['submit'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
     $name = $_POST['name'];
-    $sql_update = "UPDATE `database_fls2n_web`.`users` SET `username` = '$username', `password` = '$password', `name` = '$name' WHERE `id` = $id;";
+    $sql_update = "UPDATE `users` SET `username` = '$username', `password` = '$password', `name` = '$name' WHERE `id` = $id;";
     $query = mysqli_query($koneksi, $sql_update);
     header("Location: ./show_user_data.php");
 }

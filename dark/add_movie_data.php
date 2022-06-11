@@ -12,7 +12,7 @@ if (isset($_POST['submit'])) {
     $year = $_POST['year'];
     $school = $_POST['school'];
     $embedded_link = "https://www.youtube.com/embed/" . $_POST['thumbnail'];
-    $query = mysqli_query($koneksi, "INSERT INTO `database_fls2n_web`.`movies` (`name`, `duration`, `archievement`, `description`, `level`, `position`, `link`, `thumbnail`, `year`, `school`, `embedded_link`) VALUES ('$name', '$duration', '$archievement', '$description', '$level', '$position', '$link', '$thumbnail', '$year', '$school', '$embedded_link')");
+    $query = mysqli_query($koneksi, "INSERT INTO `movies` (`name`, `duration`, `archievement`, `description`, `level`, `position`, `link`, `thumbnail`, `year`, `school`, `embedded_link`) VALUES ('$name', '$duration', '$archievement', '$description', '$level', '$position', '$link', '$thumbnail', '$year', '$school', '$embedded_link')");
 }
 ?>
 

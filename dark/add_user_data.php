@@ -4,7 +4,7 @@ if (isset($_POST['submit'])) {
     $name = $_POST['name'];
     $username = $_POST['username'];
     $password = $_POST['password'];
-    $query = mysqli_query($koneksi, "INSERT INTO `database_fls2n_web`.`users` (`username`, `password`, `name`) VALUES ('$username', '$password', '$name')");
+    $query = mysqli_query($koneksi, "INSERT INTO `users` (`username`, `password`, `name`) VALUES ('$username', '$password', '$name')");
 }
 ?>
 

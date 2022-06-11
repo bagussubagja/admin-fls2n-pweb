@@ -28,7 +28,7 @@ if (isset($_POST['submit'])) {
     $year = $_POST['year'];
     $school = $_POST['school'];
     $embedded_link = $_POST['embedded_link'];
-    $sql_update = "UPDATE `database_fls2n_web`.`movies` SET `name` = '$name', `duration` = '$duration', `archievement` = '$archievement', `description` = '$description', `level` = '$level', `position` = '$position', `link` = '$link', `thumbnail` = '$thumbnail', `year` = '$year' , `school` = '$school', `embedded_link` = '$embedded_link' WHERE `id` = '$id';";
+    $sql_update = "UPDATE `movies` SET `name` = '$name', `duration` = '$duration', `archievement` = '$archievement', `description` = '$description', `level` = '$level', `position` = '$position', `link` = '$link', `thumbnail` = '$thumbnail', `year` = '$year' , `school` = '$school', `embedded_link` = '$embedded_link' WHERE `id` = '$id';";
     $query = mysqli_query($koneksi, $sql_update);
     header("Location: ./show_movie_data.php");
 }

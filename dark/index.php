@@ -58,7 +58,7 @@ if (!isset($_SESSION['username'])) {
                     <li class="nav-item dropdown">
                         <a class="nav-link nav-link-icon" href="javascript:void(0);" id="navbar_1_dropdown_3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i></a>
                         <div class="dropdown-menu dropdown-menu-right">
-                            <h6 class="dropdown-header"><?php echo $_SESSION['name'] ?></h6>
+                            <h6 class="dropdown-header">Admin Menu</h6>
                             <a class="dropdown-item" href="../api/auth_logout_process.php"><i class="fa fa-sign-out text-primary"></i>Sign out</a>
                         </div>
                     </li>
@@ -81,6 +81,7 @@ if (!isset($_SESSION['username'])) {
                 <ul id="main-menu" class="metismenu">
                     <li class="g_heading">Main Menu</li>
                     <li><a href="./index.php"><i class="ti-home"></i><span>Dashboard</span></a></li>
+                    <li><a href="./statistics_page.php"><i class="ti-bar-chart"></i><span>Statistik</span></a></li>
                     <li class="g_heading">Movie Menu</li>
                     <li><a href="./show_movie_data.php"><i class="ti-server"></i><span>Tampilkan Data Film</span></a></li>
                     <li><a href="./add_movie_data.php"><i class="ti-plus"></i><span>Tambahkan Data Film</span></a></li>

@@ -80,36 +80,32 @@ $(function() {
             });
         });
         $(document).ready(function(){
+            let data = [];
+            let value = [];
+            $.get("../dark/chart.php", function(respone){
+                respone.forEach(function(item){
+                    data[item.position] = item.jumlah;
+                    value.push(item.position);
+                })
+                
+            })
             var chart = c3.generate({
                 bindto: '#chart-pie', // id of chart wrapper
                 data: {
-                    columns: [
-                        // each columns data
-                        ['data1', 55],
-                        ['data2', 25],
-                        ['data3', 20],
-                    ],
-                    type: 'pie', // default type of chart
-                    colors: {
-                        'data1': bigbucket.colors["pink"],
-                        'data2': bigbucket.colors["azure"],
-                        'data3': bigbucket.colors["gray"],
+                    json: [data],
+                    keys: {
+                        value: value,
                     },
-                    names: {
-                        // name of each serie
-                        'data1': 'Arizona',
-                        'data2': 'Florida',
-                        'data3': 'Texas',
-                    }
+                    type: 'pie', // default type of chart
                 },
-                axis: {
+                pie: {
+                    title: 'Pie Chart',
+                    width: 100,
+                    height: 100,
+                    label: {show: false},
                 },
-                legend: {
-                    show: true, //hide legend
-                },
-                padding: {
-                    bottom: 0,
-                    top: 0
+                color: {
+                    pattern: ["#00FF00", "#0000ff", "#ff0000", "#ff00ff"]
                 },
             });
         });

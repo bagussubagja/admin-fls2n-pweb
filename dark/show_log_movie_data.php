@@ -104,7 +104,6 @@ $result = mysqli_query($koneksi, "SELECT * FROM log_movie");
                                         <thead>
                                             <tr>
                                                 <th>No</th>
-                                                <th>ID Film</th>
                                                 <th>Nama Film</th>
                                                 <th>Log Status</th>
                                                 <th>Waktu</th>
@@ -116,7 +115,6 @@ $result = mysqli_query($koneksi, "SELECT * FROM log_movie");
                                             while ($log_data = mysqli_fetch_array($result)) {
                                                 echo "<tr>";
                                                 echo "<td>$no</td>";
-                                                echo "<td>" . $log_data['id'] . "</td>";
                                                 echo "<td>" . $log_data['name'] . "</td>";
                                                 echo "<td>" . $log_data['status'] . "</td>";
                                                 echo "<td>" . $log_data['created_date'] . "</td>";

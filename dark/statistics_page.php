@@ -121,16 +121,16 @@
                                                                                 ?> Film</p>
                                 </div>
                                 <div class="col-lg-9">
-                                    <p>Jumlah Film yang memiliki peringkat lainnya : <?php
-                                                                                        include "../koneksi.php";
-                                                                                        $result = mysqli_query($koneksi, "SELECT show_total_movie_by_p0()");
-                                                                                        while ($row = mysqli_fetch_array($result)) {
-                                                                                            echo $row['show_total_movie_by_p0()'];
-                                                                                        }
-                                                                                        ?> Film</p>
+                                    <p>Jumlah Film yang tidak memiliki peringkat : <?php
+                                                                                    include "../koneksi.php";
+                                                                                    $result = mysqli_query($koneksi, "SELECT show_total_movie_by_p0()");
+                                                                                    while ($row = mysqli_fetch_array($result)) {
+                                                                                        echo $row['show_total_movie_by_p0()'];
+                                                                                    }
+                                                                                    ?> Film</p>
                                 </div>
                                 <div class="col-lg-9">
-                                    <p>Jumlah Total Film pada database : <?php
+                                    <p>Jumlah Total Film pada database           : <?php
                                                                             include "../koneksi.php";
                                                                             $result = mysqli_query($koneksi, "SELECT show_total_movie()");
                                                                             while ($row = mysqli_fetch_array($result)) {
